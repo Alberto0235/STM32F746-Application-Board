@@ -246,16 +246,10 @@ STM32F746-Application-Board/
 
 This project was developed as a three-person team for the *Diseño de Circuitos Impresos* (DCI) course at **Universitat Politècnica de València (UPV)**, MUISE programme, academic year 2025–26. Real-time concurrent editing and design review were managed through **Altium 365**.
 
-| | Name | Profile |
-|---|---|---|
-| 🇮🇹 | Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Alberto_Marrone-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
-| 🇩🇪 | Christian Schmitz | — |
-| 🇩🇪 | Leo Walter | — |
-
 | | Name | |
 |---|---|---|
-| 🇮🇹 | Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
-| 🇩🇪 | Christian Schmitz | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/cschmitz-eng) |
+| 🇮🇹 | Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Alberto_Marrone-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
+| 🇩🇪 | Christian Schmitz | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Christian_Schmitz-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/cschmitz-eng) |
 | 🇩🇪 | Leo Walter | — |
 
 ---
