@@ -5,21 +5,12 @@
 **Custom-designed four-layer PCB built around the STM32F746ZGTx (LQFP-144) —
 covering the full design cycle from hierarchical schematic capture to impedance-controlled layout and manufacturing outputs.**
 
-<br/>
-
-![STM32](https://img.shields.io/badge/STM32F746ZGTx-LQFP144-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
-&nbsp;
-![Altium](https://img.shields.io/badge/Altium_Designer-26-A5915F?style=flat-square)
-&nbsp;
-![Altium365](https://img.shields.io/badge/Altium_365-Team_Collaboration-0078D7?style=flat-square)
-
-![PCB](https://img.shields.io/badge/4--Layer_PCB-105_×_80_mm-1E293B?style=flat-square)
-&nbsp;
-![Class](https://img.shields.io/badge/Lab_Circuits-Class_5-374151?style=flat-square)
-&nbsp;
-![License](https://img.shields.io/badge/License-MIT-16A34A?style=flat-square)
-
-<br/>
+[![MCU](https://img.shields.io/badge/MCU-STM32F746ZGTx_LQFP144-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)](https://www.st.com/en/microcontrollers-microprocessors/stm32f746zg.html)
+[![Altium](https://img.shields.io/badge/Tool-Altium_Designer_26-A5915F?style=flat-square)](https://www.altium.com/)
+[![Altium 365](https://img.shields.io/badge/Collaboration-Altium_365-0078D7?style=flat-square)](https://www.altium.com/altium-365)
+[![PCB](https://img.shields.io/badge/PCB-4_Layer_%7C_105×80_mm-2D3748?style=flat-square)]()
+[![Fab](https://img.shields.io/badge/Fab-Lab_Circuits_Class_5-4A5568?style=flat-square)](https://www.lab-circuits.com)
+[![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)](LICENSE)
 
 *Alberto Marrone · Christian Schmitz · Leo Walter*
 *Diseño de Circuitos Impresos (DCI) — UPV MUISE, June 2026*
@@ -255,18 +246,18 @@ STM32F746-Application-Board/
 
 This project was developed as a three-person team for the *Diseño de Circuitos Impresos* (DCI) course at **Universitat Politècnica de València (UPV)**, MUISE programme, academic year 2025–26. Real-time concurrent editing and design review were managed through **Altium 365**.
 
-| Name | |
-|---|---|
-| Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
-| Christian Schmitz | |
-| Leo Walter | |
+| | Name | Profile |
+|---|---|---|
+| 🇮🇹 | Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Alberto_Marrone-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
+| 🇩🇪 | Christian Schmitz | — |
+| 🇩🇪 | Leo Walter | — |
 
 ---
 
 ## References
 
 - Lab Circuits — [Multilayer manufacturing parameters, Class 5](https://www.lab-circuits.com/es/fabricacion-multicapa)
-- STMicroelectronics — STM32F746ZGTx Datasheet and Reference Manual (RM0385)
+- STMicroelectronics — STM32F746ZGTx Datasheet and Reference Manual
 - STMicroelectronics — AN2867: Oscillator design guide for STM32 microcontrollers
 - STMicroelectronics — NUCLEO-F746ZG User Manual (UM1974)
 - *Diseño de Circuitos Impresos* — UPV course material
