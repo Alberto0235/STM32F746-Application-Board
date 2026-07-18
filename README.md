@@ -252,6 +252,12 @@ This project was developed as a three-person team for the *Diseño de Circuitos 
 | 🇩🇪 | Christian Schmitz | — |
 | 🇩🇪 | Leo Walter | — |
 
+| | Name | |
+|---|---|---|
+| 🇮🇹 | Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
+| 🇩🇪 | Christian Schmitz | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/cschmitz-eng) |
+| 🇩🇪 | Leo Walter | — |
+
 ---
 
 ## References
