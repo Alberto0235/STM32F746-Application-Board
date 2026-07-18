@@ -2,17 +2,29 @@
 
 # STM32F746ZG — Custom Application Board
 
-**A custom-designed, impedance-controlled four-layer PCB built around the STM32F746ZGTx (LQFP-144), covering the full design cycle from hierarchical schematic capture to DRC-clean layout and manufacturing outputs.**
+**Custom-designed four-layer PCB built around the STM32F746ZGTx (LQFP-144) —
+covering the full design cycle from hierarchical schematic capture to impedance-controlled layout and manufacturing outputs.**
 
-[![MCU](https://img.shields.io/badge/MCU-STM32F746ZGTx_LQFP144-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)](https://www.st.com/en/microcontrollers-microprocessors/stm32f746zg.html)
-[![Altium](https://img.shields.io/badge/Tool-Altium_Designer_26-A5915F?style=flat-square)](https://www.altium.com/)
-[![Altium 365](https://img.shields.io/badge/Collaboration-Altium_365-0078D7?style=flat-square)](https://www.altium.com/altium-365)
-[![PCB](https://img.shields.io/badge/PCB-4_Layer_%7C_105×80_mm-2D3748?style=flat-square)]()
-[![Fab](https://img.shields.io/badge/Fab-Lab_Circuits_Class_5-4A5568?style=flat-square)](https://www.lab-circuits.com)
-[![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)](LICENSE)
+<br/>
+
+![STM32](https://img.shields.io/badge/STM32F746ZGTx-LQFP144-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
+&nbsp;
+![Altium](https://img.shields.io/badge/Altium_Designer-26-A5915F?style=flat-square)
+&nbsp;
+![Altium365](https://img.shields.io/badge/Altium_365-Team_Collaboration-0078D7?style=flat-square)
+
+![PCB](https://img.shields.io/badge/4--Layer_PCB-105_×_80_mm-1E293B?style=flat-square)
+&nbsp;
+![Class](https://img.shields.io/badge/Lab_Circuits-Class_5-374151?style=flat-square)
+&nbsp;
+![License](https://img.shields.io/badge/License-MIT-16A34A?style=flat-square)
+
+<br/>
 
 *Alberto Marrone · Christian Schmitz · Leo Walter*
 *Diseño de Circuitos Impresos (DCI) — UPV MUISE, June 2026*
+
+<br/>
 
 <img src="Images/STM32F746_AppBoard.png" width="820"/>
 
@@ -22,39 +34,49 @@
 
 ## Overview
 
-This project documents the complete hardware design of a custom STM32F746ZGTx application board, derived from the [ST NUCLEO-F746ZG](https://www.st.com/en/evaluation-tools/nucleo-f746zg.html) reference design. The on-board ST-LINK debugger, Morpho/Zio expansion headers, and all peripherals not required by the project specification were removed. The remaining circuitry was redesigned and extended to implement all required interfaces from scratch on a custom PCB.
+This project documents the complete hardware design of a custom STM32F746ZGTx application board, derived from the [ST NUCLEO-F746ZG](https://www.st.com/en/evaluation-tools/nucleo-f746zg.html) reference design. The on-board ST-LINK debugger, Morpho/Zio expansion headers, and all peripherals not required by the project specification were removed. The remaining circuitry was redesigned and extended to implement all required interfaces on a custom four-layer PCB.
 
-The design was carried out by a team of three using **Altium Designer 26** with **Altium 365**, which provided cloud-based concurrent editing, version control, and design review natively within the tool. The complete design cycle — CubeMX pin allocation, hierarchical schematic capture, impedance-controlled layout, DRC resolution, and manufacturing output generation — was completed within the course timeline.
+The design was carried out by a **three-person team** using **Altium Designer 26** with **Altium 365**, which provided real-time cloud-based concurrent editing, integrated version control, and design review workflows natively within the tool — enabling all three team members to work on the same project simultaneously without file conflicts.
 
-The board is designed for fabrication by **Lab Circuits (Spain)** under **Class 5** manufacturing rules.
-
-> This board was designed as an academic project and has not been fabricated or assembled.
+> **Note:** This board was designed as an academic project and has not been fabricated or assembled. This repository is a static export of the completed design; the Altium 365 cloud workspace is not linked here.
 
 ---
 
-## Implemented Interfaces
+## ⚙️ Interfaces
 
 | Block | Implementation |
 |---|---|
-| **Microcontroller** | STM32F746ZGTx, LQFP-144, direct-solder (no socket) |
-| **Ethernet** | LAN8742A-CZ-TR PHY (RMII mode), KMS-1102NL magnetics, KRJ-CB4.2GYZNL RJ45 |
+| **Microcontroller** | STM32F746ZGTx, LQFP-144, direct-solder |
+| **Ethernet** | LAN8742A-CZ-TR PHY (RMII), KMS-1102NL magnetics, KRJ-CB4.2GYZNL RJ45 |
 | **USB** | Micro-AB OTG FS (Molex 475900001), ESDA6V1BC6 ESD protection, STMPS2151STR VBUS switch |
-| **CAN** | 2× CAN transceiver channels, switchable 120 Ω termination resistors, complex hierarchy |
-| **Analog inputs** | 2× 0–10 V → 3.3 V signal-conditioning channels, MCP6021 op-amp, complex hierarchy, ADC3 |
-| **SPI Flash** | SST26VF032BA-104I/SM, 32 Mbit (4 MB), SOIJ-8, SPI mode (1-1-1) |
+| **CAN** | 2× CAN transceiver channels, switchable 120 Ω termination, complex hierarchy |
+| **Analog inputs** | 2× 0–10 V → 3.3 V conditioning channels, MCP6021 op-amp, complex hierarchy, ADC3 |
+| **SPI Flash** | SST26VF032BA-104I/SM, 32 Mbit (4 MB), SOIJ-8, SPI mode |
 | **GPIO expansion** | Würth 61301621121, 2×8 100 mil pitch, 16 signals |
-| **Debug** | TSW-105-07-G-D 2×5 100 mil SWD + SWO, JTAG-compatible pinout |
-| **Power input** | PJ-002A DC barrel jack (preferred) + USB VBUS fallback, TPS2113A automatic power mux |
+| **Debug** | TSW-105-07-G-D, 2×5 100 mil SWD + SWO connector |
+| **Power input** | PJ-002A DC barrel jack (preferred) + USB VBUS fallback via TPS2113A mux |
 | **5 V rail** | LD1117S50TR LDO from VIN |
-| **3.3 V rail** | LD39050PU33R LDO from 5 V |
-| **BOOT0** | 10 kΩ pull-down to GND + tact switch to VDD (DFU bootloader entry) |
-| **Clocks** | 8 MHz HSE crystal → PLL (216 MHz system, 48 MHz USB), 32.768 kHz LSE (RTC) |
+| **3.3 V rail** | LD39050PU33R LDO from 5 V bus |
+| **BOOT0** | 10 kΩ pull-down + tact switch to VDD for DFU bootloader entry |
+| **Clocks** | 8 MHz HSE crystal (→ PLL, 216 MHz system / 48 MHz USB), 32.768 kHz LSE (RTC) |
 
 ---
 
-## MCU Pin Allocation
+## 🧩 Schematic Architecture
 
-Peripheral assignment was defined in STM32CubeMX and locked before schematic capture.
+The schematic is organized as a **hierarchical multi-sheet design** in Altium. A single top-level sheet instantiates all functional blocks and defines the inter-block signal connections. The CAN transceiver and ADC signal-conditioning blocks use **complex hierarchy** — one sheet per block, instantiated twice, one per channel — as required by the project specification.
+
+<p align="center">
+  <img src="Images/Schematic_Overview.png" width="740"/>
+</p>
+
+### MCU Pin Allocation
+
+Peripheral assignment was defined in STM32CubeMX and locked before schematic capture began.
+
+<p align="center">
+  <img src="Images/CubeMX_Pinout.png" width="600"/>
+</p>
 
 | Peripheral | Pins |
 |---|---|
@@ -68,105 +90,76 @@ Peripheral assignment was defined in STM32CubeMX and locked before schematic cap
 | HSE | PH0, PH1 |
 | LSE | PC14, PC15 |
 
+The full clock tree configuration is documented in the [design report](Docs/DCI_Design_Report.pdf).
+
 ---
 
-## Schematic Architecture
+## 📐 PCB Stack-up
 
-The schematic is organized as a **hierarchical multi-sheet design**. A single top-level sheet instantiates all functional blocks and defines the inter-block connections. The CAN transceiver and ADC signal-conditioning blocks are implemented with **complex hierarchy** — one sheet per block, instantiated twice — as required by the project specification.
+A four-layer stack-up was selected as a cost-effective balance between routing density and electrical performance. Thinner-than-standard prepregs (0.18 mm PP-021) bring the outer signal layers closer to their reference planes, yielding practical trace widths for the impedance profiles below — while keeping total board thickness within the 1.6 mm fabrication limit.
+
+| Layer | Type | Material | Thickness | Role |
+|---|---|---|---|---|
+| **L1** | Signal | CF-004, 35 µm Cu | 0.04 mm | Critical signals — all high-speed components |
+| | Prepreg | PP-021 | 0.18 mm | Thinned vs. standard for impedance |
+| **L2** | GND Plane | CF-004, 35 µm Cu | 0.04 mm | Solid, unbroken — primary reference for L1 |
+| | Core | Core-039 | 1.00 mm | FR-4 compatible dielectric |
+| **L3** | Power Plane | CF-004, 35 µm Cu | 0.04 mm | Split: +3V3 / +5V regions |
+| | Prepreg | PP-021 | 0.18 mm | |
+| **L4** | Signal | CF-004, 35 µm Cu | 0.04 mm | Low-speed, non-critical signals only |
+| **Total** | | | **1.59 mm** | Within 1.6 mm spec |
 
 <p align="center">
-  <img src="Images/Schematic_Overview.png" width="740"/>
+  <img src="Images/Layerstack_Visualizer.png" width="400"/>
+  <img src="Images/Layerstack_Legend.png" width="340"/>
 </p>
+
+The stack-up is **symmetric** about the board centre to prevent warpage during lamination and reflow. All critical interfaces (Ethernet RMII, USB DP/DM, CAN H/L, SPI Flash, oscillator traces) are routed on **L1**, directly above the solid **L2 GND plane**, with their components placed on the top side to eliminate layer transitions on critical paths. L4 is reserved for low-speed signals only, since the split L3 power plane does not provide a continuous return current path.
 
 ---
 
-## PCB Stack-up
+## 📡 Impedance-Controlled Routing
 
-A four-layer stack-up was selected as a cost-effective compromise between routing density and electrical performance. Thinner-than-standard prepregs (0.18 mm PP-021 vs the Lab Circuits recommended 0.20 mm) were used to bring the outer signal layers closer to their reference planes, yielding more practical trace widths for the impedance profiles below while remaining within the 1.6 mm total thickness limit.
-
-```
-Layer        Material    Thickness    Role
-─────────────────────────────────────────────────────────
-L1 Signal    CF-004      0.04 mm      Critical signal routing, all components
-             Prepreg     0.18 mm      PP-021 (thinner for impedance)
-L2 GND       CF-004      0.04 mm      Solid, unbroken ground plane
-             Core        1.00 mm      Core-039
-L3 Power     CF-004      0.04 mm      Split plane (+3V3 / +5V regions)
-             Prepreg     0.18 mm      PP-021
-L4 Signal    CF-004      0.04 mm      Non-critical, low-speed signals only
-─────────────────────────────────────────────────────────
-Total                    1.59 mm      Within 1.6 mm spec
-```
-
-<p align="center">
-  <img src="Images/Layerstack_Visualizer.png" width="420"/>
-  <img src="Images/Layerstack_Legend.png" width="350"/>
-</p>
-
-The stack-up is **symmetric** about the board centre, which ensures balanced thermal expansion during lamination and reflow and prevents board warpage.
-
-All critical interfaces (Ethernet RMII, USB differential pair, CAN differential pairs, SPI Flash, oscillator traces) are routed on **L1**, directly above the solid **L2 GND plane**. Components belonging to these interfaces are also placed on the top side, eliminating unnecessary layer transitions on critical paths. L4 is used only for secondary, low-speed signals, since the split L3 power plane does not provide a continuous return path.
-
----
-
-## Impedance-Controlled Routing
-
-All controlled-impedance profiles were calculated using the Altium Layer Stack Manager impedance calculator and applied as Altium routing rules to the corresponding net classes.
+Profiles were calculated using the Altium Layer Stack Manager and applied as routing rules to the corresponding net classes. All four profiles hit their targets within ±0.03 Ω.
 
 | Profile | Target | Trace Width | Pair Gap | Net Class |
 |---|---|---|---|---|
 | `S50` | 50 Ω single-ended | 0.304 mm | — | Controlled single-ended signals |
-| `D90` | 90 Ω differential | 0.222 mm | 0.155 mm | `USB_HighSpeed` (USB_DP / USB_DM) |
-| `D100` | 100 Ω differential | 0.170 mm | 0.160 mm | `ETH_Diff` (RMII pairs) |
-| `D120` | 120 Ω differential | 0.162 mm | 0.200 mm | `CAN_Diff` (CAN_H / CAN_L) |
+| `D90` | 90 Ω differential | 0.222 mm | 0.155 mm | `USB_HighSpeed` — USB_DP / USB_DM |
+| `D100` | 100 Ω differential | 0.170 mm | 0.160 mm | `ETH_Diff` — Ethernet RMII pairs |
+| `D120` | 120 Ω differential | 0.162 mm | 0.200 mm | `CAN_Diff` — CAN_H / CAN_L |
 
-All four profiles hit their targets within ±0.03 Ω. Differential pairs are routed with intra-pair length matching enforced as Altium rules, with return-current GND vias placed at every layer transition and GND stitching vias around both crystal oscillator circuits (HSE and LSE).
-
----
-
-## Design Rules — Lab Circuits Class 5
-
-| Parameter | Value |
-|---|---|
-| Minimum clearance (general) | 0.15 mm |
-| Minimum clearance (ESD component, local rule) | 0.12 mm |
-| Minimum trace width | 0.15 mm |
-| Power net trace width (preferred) | 0.50 mm |
-| Via drill / pad | 0.40 mm / 0.80 mm |
-| Minimum via drill | 0.30 mm |
-| Copper weight (all layers) | 35 µm (1 oz) |
-
-Dedicated net classes — `POWER`, `USB_HighSpeed`, `ETH_Diff`, `CAN_Diff`, `RMII` — carry per-class routing and clearance rules, applied automatically by Altium during routing.
+Differential pairs are routed with intra-pair length matching enforced as Altium rules. Return-current GND vias are placed at every layer transition, and GND stitching vias surround both crystal oscillator circuits (HSE and LSE).
 
 ---
 
-## DFM Measures
+## ✅ DFM — Lab Circuits Class 5
 
 | Measure | Purpose |
 |---|---|
-| Class 5 design rules throughout | Stays within standard Lab Circuits process, cost-effective |
+| Class 5 throughout (0.15 mm min clearance, 35 µm Cu) | Standard Lab Circuits process — no premium options needed |
 | Through-hole vias only | No HDI — avoids sequential lamination cost and complexity |
 | Symmetric 4-layer stack-up | Prevents warpage during lamination and reflow |
 | 45° routing, no 90° corners | Eliminates acid traps during chemical etching |
 | Teardrops at all via–trace and pad–trace junctions | Robustness against drill registration tolerances |
 | Via tenting: top covered, bottom open | Prevents solder mask blistering from trapped outgassing |
-| GND copper pours on both outer layers | Uniform copper distribution, consistent electroplating and etching |
-| Thermal reliefs on all plane-connected pads | Reliable reflow temperature at pads — prevents cold joints |
+| GND copper pours on both outer layers | Uniform copper distribution — consistent plating and etching |
+| Thermal reliefs on all plane-connected pads | Ensures pads reach reflow temperature reliably |
 | Board-level fiducials on both outer layers | Optical reference for pick-and-place alignment |
 | Rectangular outline with rounded corners | Minimises milling complexity |
-| All connectors along board edges | External cable routing and accessibility |
+| All connectors along board edges | Straightforward external cable routing |
 | Decoupling caps placed directly under ICs (bottom layer) | Minimises parasitic inductance, preserves L1 routing space |
 
 ---
 
-## Board Overview
+## 🖼️ Board Renders
 
 <p align="center">
   <img src="Images/STM32F746_AppBoard_Top.png" width="400"/>
   <img src="Images/STM32F746_AppBoard_Bottom.png" width="400"/>
 </p>
 
-**Board dimensions:** 105 × 80 mm | **Mounting holes:** 4× M3.5, 6.5 mm annular ring, near corners
+**Board dimensions:** 105 × 80 mm &nbsp;|&nbsp; **Mounting holes:** 4× M3.5, 6.5 mm annular ring
 
 ---
 
@@ -176,10 +169,11 @@ Dedicated net classes — `POWER`, `USB_HighSpeed`, `ETH_Diff`, `CAN_Diff`, `RMI
 |---|---|
 | Manufacturer | Lab Circuits, Spain |
 | Manufacturing class | Class 5 |
-| Total thickness | 1.59 mm (limit: 1.6 mm) |
-| Surface finish | HASL lead-free (PbSn) |
+| Total board thickness | 1.59 mm (limit: 1.6 mm) |
+| Copper weight | 35 µm (1 oz) all layers |
+| Surface finish | HASL lead-free |
 | Solder mask | Green |
-| Layer construction | Standard through-hole via only |
+| Via technology | Standard through-hole only |
 
 ---
 
@@ -189,13 +183,13 @@ Dedicated net classes — `POWER`, `USB_HighSpeed`, `ETH_Diff`, `CAN_Diff`, `RMI
 STM32F746-Application-Board/
 │
 ├── Hardware/
-│   ├── Altium/                               Altium Designer 26 project
-│   │   ├── STM32F746_AppBoard.PrjPCB         Project file
-│   │   ├── STM32F746_AppBoard.PcbDoc         PCB layout
-│   │   ├── STM32F746_AppBoard.BomDoc         Altium BOM document
-│   │   ├── STM32F746_AppBoard.DwfDot         Draftsman source
-│   │   ├── STM32F746_AppBoard.PCBDwf         Draftsman PCB reference
-│   │   ├── Output.OutJob                     Output job configuration
+│   ├── Altium/                               Altium Designer 26 project files
+│   │   ├── STM32F746_AppBoard.PrjPCB
+│   │   ├── STM32F746_AppBoard.PcbDoc
+│   │   ├── STM32F746_AppBoard.BomDoc
+│   │   ├── STM32F746_AppBoard.DwfDot
+│   │   ├── STM32F746_AppBoard.PCBDwf
+│   │   ├── STM32F746_AppBoard.OutJob
 │   │   ├── Top.SchDoc                        Top-level hierarchical sheet
 │   │   ├── MCU.SchDoc                        STM32F746ZGTx + decoupling
 │   │   ├── Power.SchDoc                      Power supply and distribution
@@ -203,36 +197,38 @@ STM32F746-Application-Board/
 │   │   ├── Ethernet.SchDoc                   LAN8742A PHY + magnetics + RJ45
 │   │   ├── CAN.SchDoc                        CAN transceiver (instantiated ×2)
 │   │   ├── ADC.SchDoc                        0–10 V conditioner (instantiated ×2)
-│   │   ├── SPI_Flash.SchDoc                  SST26VF032BA flash memory
+│   │   ├── SPI_Flash.SchDoc                  SPI Flash memory
 │   │   └── Connectors.SchDoc                 SWD + GPIO expansion
 │   │
 │   ├── Libraries/
-│   │   ├── STM32F746_AppBoard.SchLib         Project schematic symbols
-│   │   └── STM32F746_AppBoard.PcbLib         Project PCB footprints
+│   │   ├── STM32F746_AppBoard.SchLib
+│   │   └── STM32F746_AppBoard.PcbLib
 │   │
 │   ├── CubeMX/
-│   │   └── STM32F746_AppBoard.ioc            STM32CubeMX pin + clock config
+│   │   └── STM32F746_AppBoard.ioc
 │   │
 │   └── Exports/
-│       ├── Schematic.pdf                     Full schematic, all sheets
-│       └── Draftsman.pdf                     Stack-up, layer plots, board outline
+│       ├── Schematic.pdf
+│       └── Draftsman.pdf
 │
 ├── Manufacturing/
 │   ├── Gerbers/
-│   │   └── Gerber_STM32F746_AppBoard.zip     Gerber X2 + NC Drill files
+│   │   └── Gerber_STM32F746_AppBoard.zip
 │   └── Assembly/
-│       ├── BOM_STM32F746_AppBoard.xlsx       Bill of materials
-│       └── PickPlace_STM32F746_AppBoard.csv  Assembly placement data
+│       ├── BOM_STM32F746_AppBoard.xlsx
+│       └── PickPlace_STM32F746_AppBoard.csv
 │
 ├── Docs/
-│   └── DCI_Design_Report.pdf                 Full course design report
+│   └── DCI_Design_Report.pdf
 │
 ├── Images/
-│   ├── STM32F746_AppBoard.png                Main 3D render
-│   ├── STM32F746_AppBoard_Top.png            Top side
-│   ├── STM32F746_AppBoard_Bottom.png         Bottom side
-│   ├── Layerstack_Legend.png                 Stack-up legend
-│   └── Layerstack_Visualizer.png             Stack-up cross-section
+│   ├── STM32F746_AppBoard.png
+│   ├── STM32F746_AppBoard_Top.png
+│   ├── STM32F746_AppBoard_Bottom.png
+│   ├── Schematic_Overview.png
+│   ├── CubeMX_Pinout.png
+│   ├── Layerstack_Visualizer.png
+│   └── Layerstack_Legend.png
 │
 ├── .gitignore
 ├── LICENSE
@@ -241,31 +237,29 @@ STM32F746-Application-Board/
 
 ---
 
-## Downloads
+## 📥 Downloads
 
 | File | Description |
 |---|---|
-| [Schematic (PDF)](Hardware/Exports/Schematic.pdf) | Full schematic, all sheets |
+| [Schematic (PDF)](Hardware/Exports/Schematic.pdf) | Full schematic — all hierarchical sheets |
 | [Draftsman (PDF)](Hardware/Exports/Draftsman.pdf) | Stack-up, layer views, board outline |
-| [Design Report (PDF)](Docs/DCI_Design_Report.pdf) | DCI course report — stack-up analysis, DFM decisions |
+| [Design Report (PDF)](Docs/DCI_Design_Report.pdf) | Stack-up analysis, impedance profiles, DFM decisions |
 | [BOM (xlsx)](Manufacturing/Assembly/BOM_STM32F746_AppBoard.xlsx) | Bill of materials |
 | [Pick & Place (csv)](Manufacturing/Assembly/PickPlace_STM32F746_AppBoard.csv) | Assembly centroid data |
 | [Gerbers + Drill](Manufacturing/Gerbers/Gerber_STM32F746_AppBoard.zip) | Production-ready Gerber X2 + NC Drill |
-| [CubeMX Config (.ioc)](Hardware/CubeMX/STM32F746_AppBoard.ioc) | STM32CubeMX pin assignment + clock tree |
+| [CubeMX Config (.ioc)](Hardware/CubeMX/STM32F746_AppBoard.ioc) | STM32CubeMX pin assignment and clock tree |
 
 ---
 
-## Team
+## 👥 Team
 
-This project was developed as a three-person team for the *Diseño de Circuitos Impresos* (DCI) course at **Universitat Politècnica de València (UPV)**, MUISE programme, academic year 2025–26.
+This project was developed as a three-person team for the *Diseño de Circuitos Impresos* (DCI) course at **Universitat Politècnica de València (UPV)**, MUISE programme, academic year 2025–26. Real-time concurrent editing and design review were managed through **Altium 365**.
 
-Design collaboration was managed through **Altium 365**, which provides cloud-based concurrent editing, integrated version history, and design review workflows natively within Altium Designer — allowing all three team members to work on the same project simultaneously without file conflicts.
-
-| | Name | Profile |
-|---|---|---|
-| 🇮🇹 | Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Alberto_Marrone-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
-| 🇩🇪 | Christian Schmitz | — |
-| 🇩🇪 | Leo Walter | — |
+| Name | |
+|---|---|
+| Alberto Marrone | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alberto-marrone-444192274) |
+| Christian Schmitz | |
+| Leo Walter | |
 
 ---
 
@@ -275,14 +269,11 @@ Design collaboration was managed through **Altium 365**, which provides cloud-ba
 - STMicroelectronics — STM32F746ZGTx Datasheet and Reference Manual (RM0385)
 - STMicroelectronics — AN2867: Oscillator design guide for STM32 microcontrollers
 - STMicroelectronics — NUCLEO-F746ZG User Manual (UM1974)
-- Diseño de Circuitos Impresos — UPV course material
+- *Diseño de Circuitos Impresos* — UPV course material
 
 ---
 
 ## License
 
 Released under the [MIT License](LICENSE).
-
-```
-Copyright (c) 2026 Alberto Marrone, Christian Schmitz, Leo Walter
-```
+`Copyright (c) 2026 Alberto Marrone, Christian Schmitz, Leo Walter`
