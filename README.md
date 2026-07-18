@@ -101,8 +101,8 @@ A four-layer stack-up was selected as a cost-effective balance between routing d
 | **Total** | | | **1.59 mm** | Within 1.6 mm spec |
 
 <p align="center">
-  <img src="Images/Layerstack_Legend.png" width="370"/>
-  <img src="Images/Layerstack_Visualizer.png" width="370"/>
+  <img src="Images/Layerstack_Legend.png" width="410"/>
+  <img src="Images/Layerstack_Visualizer.png" width="400"/>
 </p>
 
 The stack-up is **symmetric** about the board centre to prevent warpage during lamination and reflow. All critical interfaces (Ethernet RMII, USB DP/DM, CAN H/L, SPI Flash, oscillator traces) are routed on **L1**, directly above the solid **L2 GND plane**, with their components placed on the top side to eliminate layer transitions on critical paths. L4 is reserved for low-speed signals only, since the split L3 power plane does not provide a continuous return current path.
