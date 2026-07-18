@@ -1,0 +1,76 @@
+### Altium Designer ###
+
+# Thumbnail and preview cache — auto-generated, large binary blobs
+**/__Previews/
+
+# Local version history — managed by Altium 365, not needed in git
+**/History/
+
+# Project logs
+Project Logs*/
+
+# Auto-generated project structure file (Altium 365 cloud sync metadata)
+# Note: both case variants listed — Linux git is case-sensitive
+*.PrjPcbStructure
+*.PrjPCBStructure
+*.PrjMbdStructure
+
+# HTML auto-conversion notice files
+*.PcbDoc.htm
+*.SchDoc.htm
+
+# Database link lock files
+**/*.ldb
+
+# Local document metadata (Altium 365 local state)
+*.metadata
+
+# CompareHistory folder
+CompareHistory/
+
+# CAMtastic files — regeneratable from Gerbers, large binary
+*.CAM
+*.Cam
+
+# Built-in Altium integrated libraries — do not redistribute (Altium license)
+Miscellaneous Devices.IntLib
+Miscellaneous Connectors.IntLib
+
+### Operating System ###
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+### Editors ###
+
+# VS Code
+.vscode/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# JetBrains
+.idea/
