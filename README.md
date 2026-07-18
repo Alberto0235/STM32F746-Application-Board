@@ -101,7 +101,7 @@ A four-layer stack-up was selected as a cost-effective balance between routing d
 | **Total** | | | **1.59 mm** | Within 1.6 mm spec |
 
 <p align="center">
-  <img src="Images/Layerstack_Legend.png" width="410"/>
+  <img src="Images/Layerstack_Legend.png" width="430"/>
   <img src="Images/Layerstack_Visualizer.png" width="400"/>
 </p>
 
