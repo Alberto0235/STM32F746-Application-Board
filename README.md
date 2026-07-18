@@ -237,7 +237,7 @@ STM32F746-Application-Board/
 | [Design Report (PDF)](Docs/DCI_Design_Report.pdf) | Stack-up analysis, impedance profiles, DFM decisions |
 | [BOM (xlsx)](Manufacturing/Assembly/BOM_STM32F746_AppBoard.xlsx) | Bill of materials |
 | [Pick & Place (csv)](Manufacturing/Assembly/PickPlace_STM32F746_AppBoard.csv) | Assembly centroid data |
-| [Gerbers + Drill](Manufacturing/Gerbers/Gerber_STM32F746_AppBoard.zip) | Production-ready Gerber X2 + NC Drill |
+| [Gerbers](Manufacturing/Gerbers/Gerber_STM32F746_AppBoard.zip) | Production-ready Gerber X2 |
 | [CubeMX Config (.ioc)](Hardware/CubeMX/STM32F746_AppBoard.ioc) | STM32CubeMX pin assignment and clock tree |
 
 ---
