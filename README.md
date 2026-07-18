@@ -13,6 +13,7 @@ covering the full design cycle from hierarchical schematic capture to impedance-
 [![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)](LICENSE)
 
 *Alberto Marrone · Christian Schmitz · Leo Walter*
+<br />
 *Diseño de Circuitos Impresos (DCI) — UPV MUISE, June 2026*
 
 <br/>
